@@ -1,0 +1,37 @@
+.badgeText {
+  font-size: 13px;
+  line-height: 19.5px;
+  letter-spacing: 0.32px;
+}
+.heroHeading {
+  font-size: 44px;
+  line-height: 48.4px;
+  letter-spacing: -1px;
+}
+
+.heroSubtext {
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0px;
+}
+
+.btnText {
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.3px;
+}
+.glassBtn {
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+}
+.statusText {
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 0px;
+  font-weight: 400;
+}
+.trackBtn {
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: -0.3px;
+}
