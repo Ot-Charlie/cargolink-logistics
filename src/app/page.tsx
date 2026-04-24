@@ -4,9 +4,8 @@ import Image from "next/image";
 export default function Home() {
   return (
     <main className="">
-     <section className="w-full m-h-screen pt-3 pb-10 bg-[#0F2137]">
-  {/* background image goes here later */}
-  
+   <section className="heroSection w-full min-h-screen pt-3 pb-10">
+
    <Navbar />
    {/* Badge */}
 <div className="flex items-center justify-center mt-4">
@@ -40,14 +39,14 @@ export default function Home() {
     {/* Start Shipping */}
     <button
       type="button"
-      className={`bg-accent text-white font-inter font-bold rounded-[10px] w-full max-w-81 h-12 ${styles.btnText}`}
+      className={`cursor-pointer bg-accent text-white font-inter font-bold rounded-[10px] w-full max-w-81 h-12 ${styles.btnText}`}
     >
       Start Shipping
     </button>
     {/* Track a Shipment */}
     <button
       type="button"
-      className={`bg-white/20 backdrop-blur-md border border-white/20 text-white font-inter font-bold rounded-[10px] w-full max-w-81 h-12 ${styles.btnText}`}
+      className={`cursor-pointer bg-white/20 backdrop-blur-md border border-white/20 text-white font-inter font-bold rounded-[10px] w-full max-w-81 h-12 ${styles.btnText}`}
     >
       Track a Shipment
     </button>
@@ -59,13 +58,13 @@ export default function Home() {
   <div className="flex gap-2">
     <button
       type="button"
-      className="w-34 h-9.75 rounded-[42px] bg-white text-black font-inter font-normal"
+      className="cursor-pointer w-34 h-9.75 rounded-[42px] bg-white text-black font-inter font-normal"
     >
       Track
     </button>
     <button
       type="button"
-      className={`w-34 h-9.75 rounded-[42px] bg-white/20 backdrop-blur-md border border-white/70 text-white font-inter font-normal ${styles.glassBtn}`}
+      className={`cursor-pointer w-34 h-9.75 rounded-[42px] bg-white/20 backdrop-blur-md border border-white/70 text-white font-inter font-normal ${styles.glassBtn}`}
     >
       Schedule
     </button>
@@ -130,11 +129,197 @@ export default function Home() {
 {/* Track Shipment Button */}
 <button
   type="button"
-  className={`w-full h-10 bg-accent text-white font-inter font-semibold rounded-[10px] ${styles.trackBtn}`}
+  className={`cursor-pointer w-full h-10 bg-accent text-white font-inter font-semibold rounded-[10px] ${styles.trackBtn}`}
 >
   Track Shipment →
 </button>
 </div>
+</div>
+</section>
+
+{/* Sponsors Section */}
+<section className="w-full bg-white py-12 px-6 flex flex-col items-center gap-8">
+  
+  {/* Heading */}
+  <p className={`text-[#43454A] font-dm-sans text-center ${styles.sponsorText}`}>
+    Built for companies that can't afford delays
+  </p>
+{/*Sponsors images*/}
+<div className="flex flex-col items-center gap-y-4 lg:flex-row lg:justify-between lg:w-257 lg:items-center">
+  
+  <div className="flex gap-x-2 lg:contents">
+    <Image src="/airplane.svg" alt="Airplane" width={100} height={40} />
+    <Image src="/railway.svg" alt="Railway" width={100} height={40} />
+    <Image src="/clerk.svg" alt="Clerk" width={100} height={40} />
+  </div>
+
+  <div className="flex gap-x-2 lg:contents">
+    <Image src="/mintlify.svg" alt="Mintlify" width={100} height={40} />
+    <Image src="/trigger-dev.svg" alt="Trigger Dev" width={100} height={40} />
+  </div>
+
+  <div className="lg:contents">
+    <Image src="/airplane.svg" alt="Airplane" width={100} height={40} />
+  </div>
+</div>
+{/* Images Grid */}
+<div className="flex flex-col gap-3 lg:flex-row lg:items-center">
+  
+  {/* Grid - left side on desktop */}
+  <div className="flex flex-col gap-3">
+    
+    {/* Air - top */}
+    <div className="relative w-83 h-60">
+      <Image 
+        src="/air.png" 
+        alt="Air freight" 
+        fill
+          sizes="332px"
+        className="rounded-xl object-cover"
+      />
+      <span className={`absolute top-3 left-3 bg-white px-3 py-1 rounded-[42px] text-black font-inter font-bold ${styles.imageLabel}`}>
+        AIR
+      </span>
+    </div>
+
+    {/* Sea and Road - bottom row */}
+    <div className="flex gap-3">
+      
+      {/* Sea */}
+      <div className="relative w-40 h-40">
+        <Image 
+          src="/sea.png" 
+          alt="Sea freight" 
+          fill
+            sizes="160px"
+          className="rounded-xl object-cover"
+        />
+        <span className={`absolute top-3 left-3 bg-white px-3 py-1 rounded-[42px] text-black font-inter font-bold ${styles.imageLabel}`}>
+          SEA
+        </span>
+      </div>
+
+      {/* Road */}
+      <div className="relative w-40 h-40">
+        <Image 
+          src="/road.png" 
+          alt="Road freight" 
+          fill
+            sizes="160px"
+          className="rounded-xl object-cover"
+        />
+        <span className={`absolute top-3 left-3 bg-white px-3 py-1 rounded-[42px] text-black font-inter font-bold ${styles.imageLabel}`}>
+          ROAD
+        </span>
+      </div>
+
+    </div>
+  </div>
+
+{/* Write up - right side on desktop */}
+<div className="flex flex-col gap-4">
+  
+  {/* H2 */}
+  <h2 className={`font-urbanist font-semibold text-black max-w-80 lg:max-w-none ${styles.reliabilityHeading}`}>
+    Logistics built for{" "}
+    <span className="text-accent">reliability</span>
+    , not promises
+  </h2>
+
+  {/* Paragraph 1 */}
+  <p className={`font-inter max-w-81.5 ${styles.bodyText}`}>
+    <span className="text-black font-semibold">
+      For too long, cross-border shipping has been a black box.{" "}
+    </span>
+    <span className="text-text-medium font-normal">
+      Shipments disappear into transit. Updates arrive late. Accountability vanishes at borders.
+    </span>
+  </p>
+
+  {/* Paragraph 2 */}
+  <p className={`font-inter font-normal text-text-medium max-w-85 ${styles.bodyText}`}>
+    We built CargoLink differently. Every shipment is tracked in real time. Every handoff is documented. Every partner is vetted. Because when you're moving millions in goods, visibility isn't a feature — it's the foundation.
+  </p>
+
+  {/* Paragraph 3 */}
+  <p className={`font-inter font-normal text-text-medium max-w-81.5 ${styles.bodyText}`}>
+    Whether it's air, sea, or road, we operate with one principle: your cargo arrives as promised, or we tell you why it didn't.
+  </p>
+{/* Bullet Points */}
+<div className="flex flex-col gap-4">
+
+  {/* 4th - Location */}
+  <div className="flex items-start gap-3">
+    <Image
+      src="/location.svg"
+      alt="Location"
+      width={43}
+      height={43}
+      className="rounded-xl shrink-0"
+    />
+    <div className="flex flex-col gap-1">
+      <h3 className={`font-inter font-semibold text-black max-w-70 ${styles.bulletHeading}`}>
+        Know where your shipment is — at every step.
+      </h3>
+      <p className={`font-inter font-normal text-text-subtle max-w-55 ${styles.bulletText}`}>
+        Real-time tracking across all transport modes, with instant alerts.
+      </p>
+    </div>
+  </div>
+
+  {/* 5th - Secure */}
+  <div className="flex items-start gap-3">
+    <Image
+      src="/secure.svg"
+      alt="Secure"
+      width={43}
+      height={43}
+      className="rounded-xl shrink-0"
+    />
+    <div className="flex flex-col gap-1">
+      <h3 className={`font-inter font-semibold text-black max-w-70 ${styles.bulletHeading}`}>
+        Handled securely across borders, ports, and roads.
+      </h3>
+      <p className={`font-inter font-normal text-text-subtle max-w-64 ${styles.bulletText}`}>
+        Vetted partners, documented handoffs, full chain of custody.
+      </p>
+    </div>
+  </div>
+
+  {/* 6th - Global */}
+  <div className="flex items-start gap-3">
+    <Image
+      src="/global.svg"
+      alt="Global"
+      width={43}
+      height={43}
+      className="rounded-xl shrink-0"
+    />
+    <div className="flex flex-col gap-1">
+      <h3 className={`font-inter font-semibold text-black max-w-57 ${styles.bulletHeading}`}>
+        Built to operate globally, without breaking down locally.
+      </h3>
+      <p className={`font-inter font-normal text-text-subtle max-w-70 ${styles.bulletText}`}>
+        Seamless integration across 120+ countries and 500+ logistics hubs.
+      </p>
+    </div>
+  </div>
+</div>
+{/* Learn More Button */}
+<button
+  type="button"
+  className={`cursor-pointer flex items-center gap-2 bg-black text-white font-inter font-semibold rounded-xl w-60 h-12.5 px-6 mx-auto ${styles.learnBtn}`}
+>
+  Learn how we deliver
+  <Image
+    src="/right-arrow.svg"
+    alt="Arrow"
+    width={14}
+    height={16}
+  />
+</button>
+</div>
+
 </div>
 </section>
 

@@ -24,17 +24,19 @@ export default function Navbar() {
           </span>
         </div>
 
-        {/* Hamburger button */}
-        <button
-          type="button"
-          aria-label="Toggle menu"
-          onClick={() => setIsOpen(!isOpen)}
-          className="flex flex-col gap-1.5 cursor-pointer"
-        >
-          <span className={`block w-6 h-0.5 bg-white transition-all duration-300 ${isOpen ? "rotate-45 translate-y-2" : ""}`} />
-          <span className={`block w-6 h-0.5 bg-white transition-all duration-300 ${isOpen ? "opacity-0" : ""}`} />
-          <span className={`block w-6 h-0.5 bg-white transition-all duration-300 ${isOpen ? "-rotate-45 -translate-y-2" : ""}`} />
-        </button>
+{/* Hamburger button */}
+<button
+  type="button"
+  aria-label="Toggle menu"
+  onClick={() => setIsOpen(!isOpen)}
+  className="cursor-pointer"
+>
+  {isOpen ? (
+    <Image src="/close.svg" alt="Close menu" width={20} height={20} />
+  ) : (
+    <Image src="/hamburg.svg" alt="Open menu" width={22} height={22} />
+  )}
+</button>
       </div>
     </nav>
 
