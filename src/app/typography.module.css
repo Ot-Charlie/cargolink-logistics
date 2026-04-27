@@ -62,3 +62,21 @@
   line-height: 24px;
   letter-spacing: -0.5px;
 }
+.sectionSubtext {
+   font-size: 16px; 
+   line-height: 24px;
+    letter-spacing: -0.5px; 
+    font-weight: 300; 
+  }
+    .stepHeading { 
+      font-size: 1.7rem; 
+      line-height: 36px;
+       letter-spacing: -0.5px; 
+       font-weight: 600;
+       }
+.stepText { 
+  font-size: 0.93rem;
+   line-height: 30px;
+    letter-spacing: -0.5px; 
+    font-weight: 400;
+   }

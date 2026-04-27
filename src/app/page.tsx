@@ -1,6 +1,7 @@
 import styles from "@/app/typography.module.css";
 import Navbar from "@/components/Navbar";
 import Image from "next/image";
+import ShippingSteps from "@/components/ShippingSteps";
 export default function Home() {
   return (
     <main className="">
@@ -308,7 +309,7 @@ export default function Home() {
 {/* Learn More Button */}
 <button
   type="button"
-  className={`cursor-pointer flex items-center gap-2 bg-black text-white font-inter font-semibold rounded-xl w-60 h-12.5 px-6 mx-auto ${styles.learnBtn}`}
+  className={`cursor-pointer flex items-center gap-2 bg-black text-white font-inter font-semibold rounded-xl w-60 h-12.5 px-6  ${styles.learnBtn}`}
 >
   Learn how we deliver
   <Image
@@ -322,7 +323,16 @@ export default function Home() {
 
 </div>
 </section>
-
+{/* Section 3 */}
+<section className="bg-white py-16 px-6 flex flex-col items-center">
+  <h2 className={`font-urbanist font-semibold text-text-heading text-center max-w-90 ${styles.reliabilityHeading}`}>
+    How Shipping Actually Works
+  </h2>
+  <p className={`font-inter font-light text-text-subtle text-center mt-4 max-w-60 ${styles.sectionSubtext}`}>
+    From pickup to delivery — without the guesswork.
+  </p>
+    <ShippingSteps />
+</section>
     </main>
   );
 }

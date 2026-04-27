@@ -32,3 +32,18 @@ body {
   background-position: center;
   background-repeat: no-repeat;
 }
+ [data-step-image] {
+  filter: grayscale(100%);
+  opacity: 0.5;
+  transform: translateY(20px);
+  transition: filter 1.5s ease-out, opacity 1.5s ease-out, transform 1.5s ease-out;
+}
+
+[data-step-image].in-view {
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: translateY(0px);
+}
+.tapered-line {
+  background: linear-gradient(to bottom, transparent, #93C5FD 10%, #93C5FD 90%, transparent);
+}
