@@ -57,7 +57,7 @@ export default function ShippingSteps() {
             observer.disconnect();
           }
         },
-        { threshold: 0.3 }
+        { threshold: 0.3 },
       );
 
       observer.observe(el);
@@ -69,26 +69,27 @@ export default function ShippingSteps() {
 
   return (
     <div className="relative flex flex-col w-full mt-12 px-6 lg:max-w-4xl lg:mx-auto">
-  
-  {/* Single continuous vertical line — desktop only */}
-  <div className="tapered-line hidden lg:block absolute top-0 left-1/2 -translate-x-1/2 w-0.5 h-full" />
+      {/* Single continuous vertical line — desktop only */}
+      <div className="tapered-line hidden lg:block absolute top-0 left-1/2 -translate-x-1/2 w-0.5 h-full" />
 
-  {steps.map((step, index) => (
-    <div
-      key={index}
-      ref={(el) => { itemRefs.current[index] = el; }}
-      className={`flex flex-col items-center gap-0 lg:flex-row lg:items-stretch lg:gap-0 ${
-        step.reverse ? "lg:flex-row-reverse" : ""
-      }`}
-    >
-      {/* Text Box — no more border */}
-      <div
-        className={`relative flex flex-col gap-3 lg:w-1/2 lg:py-10 ${
-          step.textAlign === "right"
-            ? "items-center lg:items-end lg:pr-10"
-            : "items-center lg:items-start lg:pl-10"
-        }`}
-      >
+      {steps.map((step, index) => (
+        <div
+          key={index}
+          ref={(el) => {
+            itemRefs.current[index] = el;
+          }}
+          className={`flex flex-col items-center gap-0 lg:flex-row lg:items-stretch lg:gap-0 ${
+            step.reverse ? "lg:flex-row-reverse" : ""
+          }`}
+        >
+          {/* Text Box — no more border */}
+          <div
+            className={`relative flex flex-col gap-3 lg:w-1/2 lg:py-10 ${
+              step.textAlign === "right"
+                ? "items-center lg:items-end lg:pr-10"
+                : "items-center lg:items-start lg:pl-10"
+            }`}
+          >
             {/* Number — desktop only */}
             <span
               className={`hidden lg:block absolute -top-8 font-urbanist font-bold text-[120px] text-black/5 leading-none select-none ${
@@ -115,7 +116,10 @@ export default function ShippingSteps() {
           </div>
 
           {/* Image */}
-          <div data-step-image className="lg:w-1/2 flex justify-center lg:px-10">
+          <div
+            data-step-image
+            className="lg:w-1/2 flex justify-center lg:px-10"
+          >
             <Image
               src={step.image}
               alt={step.h3}
