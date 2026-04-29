@@ -71,7 +71,7 @@ export default function ShippingSteps() {
     <div className="relative flex flex-col w-full mt-12 px-6 lg:max-w-4xl lg:mx-auto">
   
   {/* Single continuous vertical line — desktop only */}
-  <div className="tapered-line hidden lg:block absolute top-0 left-1/2 -translate-x-1/2 w-[2px] h-full" />
+  <div className="tapered-line hidden lg:block absolute top-0 left-1/2 -translate-x-1/2 w-0.5 h-full" />
 
   {steps.map((step, index) => (
     <div

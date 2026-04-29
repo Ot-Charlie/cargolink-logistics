@@ -1,22 +1,20 @@
 .badgeText {
-  font-size: 13px;
+  font-size: 0.8125rem;
   line-height: 19.5px;
   letter-spacing: 0.32px;
 }
 .heroHeading {
-  font-size: 44px;
+  font-size: 2.75rem;
   line-height: 48.4px;
   letter-spacing: -1px;
 }
-
 .heroSubtext {
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 26px;
   letter-spacing: 0px;
 }
-
 .btnText {
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 24px;
   letter-spacing: -0.3px;
 }
@@ -25,58 +23,97 @@
   backdrop-filter: blur(12px);
 }
 .statusText {
-  font-size: 12px;
+  font-size: 0.75rem;
   line-height: 18px;
   letter-spacing: 0px;
   font-weight: 400;
 }
 .trackBtn {
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 21px;
   letter-spacing: -0.3px;
 }
+.sponsorText {
+  font-size: 1rem;
+  line-height: 24px;
+  letter-spacing: -0.5px;
+  font-weight: 400;
+}
 .imageLabel {
-  font-size: 12px;
+  font-size: 0.75rem;
   line-height: 18px;
   letter-spacing: 0.1px;
 }
 .reliabilityHeading {
-  font-size: 30px;
+  font-size: 1.875rem;
   line-height: 37.5px;
   letter-spacing: -0.5px;
 }
-
 .bodyText {
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 28px;
   letter-spacing: -0.5px;
 }
 .bulletHeading {
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 28px;
   letter-spacing: -0.5px;
 }
-
 .bulletText {
-  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 24px;
+  letter-spacing: -0.5px;
+}
+.learnBtn {
+  font-size: 1rem;
   line-height: 24px;
   letter-spacing: -0.5px;
 }
 .sectionSubtext {
-   font-size: 16px; 
-   line-height: 24px;
-    letter-spacing: -0.5px; 
-    font-weight: 300; 
-  }
-    .stepHeading { 
-      font-size: 1.7rem; 
-      line-height: 36px;
-       letter-spacing: -0.5px; 
-       font-weight: 600;
-       }
-.stepText { 
-  font-size: 0.93rem;
-   line-height: 30px;
-    letter-spacing: -0.5px; 
-    font-weight: 400;
-   }
+  font-size: 1rem;
+  line-height: 24px;
+  letter-spacing: -0.5px;
+  font-weight: 300;
+}
+.stepHeading {
+  font-size: 1.875rem;
+  line-height: 36px;
+  letter-spacing: -0.5px;
+  font-weight: 600;
+}
+.stepText {
+  font-size: 1.125rem;
+  line-height: 30px;
+  letter-spacing: -0.5px;
+  font-weight: 400;
+}
+.featureHeading {
+  font-size: 1.0625rem;
+  line-height: 25.5px;
+  letter-spacing: -0.5px;
+  font-weight: 600;
+}
+.footerBrand {
+  font-size: 1.25rem;
+  line-height: 28px;
+  letter-spacing: -0.5px;
+  font-weight: 700;
+}
+.footerBrandText {
+  font-size: 0.875rem;
+  line-height: 22.75px;
+  letter-spacing: 0px;
+  font-weight: 400;
+}
+.footerHeading {
+  font-size: 1rem;
+  line-height: 24px;
+  letter-spacing: 0px;
+  font-weight: 600;
+}
+.footerLink {
+  font-size: 0.875rem;
+  line-height: 20px;
+  letter-spacing: 0px;
+  font-weight: 400;
+}

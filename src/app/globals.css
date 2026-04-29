@@ -3,21 +3,29 @@
 :root {
   --background: #FFFFFF;
   --accent: #E67E22;
+  --dark-accent: #d35400;
   --text-heading: #0F2137;
   --text-primary: #111827;
   --text-medium: #374151;
   --text-subtle: #4B5563;
   --text-light: #6A7282;
+  --light-shade: #F1F1F1;
+  --footer-bg: #F9FAFB;
+  --footer-text: #6A7282;
 }
 
 @theme inline {
     --color-background: var(--background);
     --color-accent: var(--accent);
+    --color-dark-accent: var(--dark-accent);
       --color-text-heading: var(--text-heading);
   --color-text-primary: var(--text-primary);
   --color-text-medium: var(--text-medium);
   --color-text-subtle: var(--text-subtle);
   --color-text-light: var(--text-light);
+  --color-light-shade: var(--light-shade);
+    --color-footer-bg: var(--footer-bg);
+    --color-footer-text: var(--footer-text);
   --font-urbanist: var(--font-urbanist);
   --font-inter: var(--font-inter);
    --font-dm-sans: var(--font-dm-sans);
