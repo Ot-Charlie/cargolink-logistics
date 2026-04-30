@@ -16,7 +16,7 @@ export default function TrackingForm() {
           onClick={() => setMode("track")}
           className={`cursor-pointer w-34 h-9.75 rounded-[42px] font-inter font-normal transition-all ${
             mode === "track"
-              ? "bg-background text-black"
+              ? "bg-background text-text-primary"
               : `bg-background/20 backdrop-blur-md border border-background/70 text-background ${styles.glassBtn}`
           }`}
         >
@@ -27,7 +27,7 @@ export default function TrackingForm() {
           onClick={() => setMode("schedule")}
           className={`cursor-pointer w-34 h-9.75 rounded-[42px] font-inter font-normal transition-all ${
             mode === "schedule"
-              ? "bg-background text-black"
+              ? "bg-background text-text-primary"
               : `bg-background/20 backdrop-blur-md border border-background/70 text-background ${styles.glassBtn}`
           }`}
         >
@@ -92,7 +92,7 @@ export default function TrackingForm() {
             {/* Status Row */}
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-1.5">
-                <span className="w-2 h-2 rounded-full bg-[#05DF72]"></span>
+                <span className="w-2 h-2 rounded-full bg-green-dot"></span>
                 <span
                   className={`font-inter text-text-medium ${styles.statusText}`}
                 >

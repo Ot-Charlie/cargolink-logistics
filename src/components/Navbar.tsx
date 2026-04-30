@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -8,11 +8,25 @@ const NAV_LINKS = ["Services", "Solutions", "Tracking"];
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 10);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <div className="relative w-[80%] mx-auto">
+   <div className="fixed top-4 z-50 w-[80%] left-1/2 -translate-x-1/2">
       {/* Navbar */}
-      <nav className="w-full px-6 py-2 rounded-[75px] bg-white/20 backdrop-blur-md border border-white/20">
+      <nav className={`w-full px-6 py-2 rounded-[75px] border transition-all duration-300 ${
+        scrolled
+          ? "bg-background border-background shadow-md"
+          : "bg-background/20 backdrop-blur-md border-background/20"
+      }`}>
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center gap-2">
@@ -24,7 +38,7 @@ export default function Navbar() {
               loading="eager"
             />
             <span className="text-xl font-bold font-urbanist">
-              <span className="text-white">CARGO</span>
+              <span className={scrolled ? "text-text-heading" : "text-background"}>CARGO</span>
               <span className="text-accent">LINK</span>
             </span>
           </div>
@@ -71,7 +85,7 @@ export default function Navbar() {
 
       {/* Dropdown — mobile only */}
       {isOpen && (
-        <div className="lg:hidden absolute top-full left-0 right-0 mt-2 bg-white rounded-2xl py-4 px-6 flex flex-col gap-4 shadow-md z-50">
+        <div className="lg:hidden absolute top-full left-0 right-0 mt-2 bg-background rounded-2xl py-4 px-6 flex flex-col gap-4 shadow-md z-50">
           {NAV_LINKS.map((link) => (
             <Link
               key={link}

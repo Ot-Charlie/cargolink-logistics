@@ -3,6 +3,7 @@
 :root {
   --background: #FFFFFF;
   --accent: #E67E22;
+  --green-dot: #05DF72;
   --dark-accent: #d35400;
   --text-heading: #0F2137;
   --text-primary: #111827;
@@ -10,6 +11,7 @@
   --text-subtle: #4B5563;
   --text-light: #6A7282;
   --light-shade: #F1F1F1;
+  --border-shade: #FFFFFF33;
   --footer-bg: #F9FAFB;
   --footer-text: #6A7282;
 }
@@ -17,6 +19,7 @@
 @theme inline {
     --color-background: var(--background);
     --color-accent: var(--accent);
+      --color-green-dot: var(--green-dot);
     --color-dark-accent: var(--dark-accent);
       --color-text-heading: var(--text-heading);
   --color-text-primary: var(--text-primary);
@@ -24,6 +27,7 @@
   --color-text-subtle: var(--text-subtle);
   --color-text-light: var(--text-light);
   --color-light-shade: var(--light-shade);
+  --color-border-shade: var(--border-shade);
     --color-footer-bg: var(--footer-bg);
     --color-footer-text: var(--footer-text);
   --font-urbanist: var(--font-urbanist);
@@ -44,7 +48,7 @@ body {
   filter: grayscale(100%);
   opacity: 0.5;
   transform: translateY(20px);
-  transition: filter 1.5s ease-out, opacity 1.5s ease-out, transform 1.5s ease-out;
+  transition: filter 2.5s ease-out, opacity 1.5s ease-out, transform 1.5s ease-out;
 }
 
 [data-step-image].in-view {

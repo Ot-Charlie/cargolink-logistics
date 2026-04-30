@@ -92,7 +92,7 @@ export default function ShippingSteps() {
           >
             {/* Number — desktop only */}
             <span
-              className={`hidden lg:block absolute -top-8 font-urbanist font-bold text-[120px] text-black/5 leading-none select-none ${
+              className={`hidden lg:block absolute -top-8 font-urbanist font-bold text-[120px] text-text-primary/5 leading-none select-none ${
                 step.textAlign === "right" ? "right-0" : "left-0"
               }`}
             >
@@ -100,7 +100,7 @@ export default function ShippingSteps() {
             </span>
 
             <h3
-              className={`font-inter font-semibold text-black relative z-10 lg:mt-3 text-center ${
+              className={`font-inter font-semibold text-text-primary relative z-10 lg:mt-3 text-center ${
                 step.textAlign === "right" ? "lg:text-right" : "lg:text-left"
               } ${styles.stepHeading}`}
             >

@@ -10,7 +10,7 @@ export default function Home() {
         <Navbar />
         {/* Badge */}
         <div className="flex items-center justify-center mt-4">
-          <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/20 backdrop-blur-md border border-white/20 lg:hidden">
+          <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-background/20 backdrop-blur-md border border-background/20 lg:hidden">
             {/* Orange dot */}
             <span className="w-2 h-2 rounded-full bg-accent"></span>
             {/* Text */}
@@ -58,10 +58,10 @@ export default function Home() {
       </section>
 
       {/* Sponsors Section */}
-      <section className="w-full bg-white py-12 flex flex-col items-center gap-8">
+      <section className="w-full bg-background py-12 flex flex-col items-center gap-8">
         {/* Heading */}
         <p
-          className={`text-[#43454A] font-dm-sans text-center ${styles.sponsorText}`}
+          className={`text-text-light font-dm-sans text-center ${styles.sponsorText}`}
         >
           Built for companies that can't afford delays
         </p>
@@ -150,7 +150,7 @@ export default function Home() {
                   className="rounded-xl object-cover"
                 />
                 <span
-                  className={`absolute top-3 left-3 bg-white px-3 py-1 rounded-[42px] text-black font-inter font-bold ${styles.imageLabel}`}
+                  className={`absolute top-3 left-3 bg-background px-3 py-1 rounded-[42px] text-text-primary font-inter font-bold ${styles.imageLabel}`}
                 >
                   SEA
                 </span>
@@ -166,7 +166,7 @@ export default function Home() {
                   className="rounded-xl object-cover"
                 />
                 <span
-                  className={`absolute top-3 left-3 bg-white px-3 py-1 rounded-[42px] text-black font-inter font-bold ${styles.imageLabel}`}
+                  className={`absolute top-3 left-3 bg-background px-3 py-1 rounded-[42px] text-text-primary font-inter font-bold ${styles.imageLabel}`}
                 >
                   ROAD
                 </span>
@@ -188,7 +188,7 @@ export default function Home() {
             <p
               className={`font-inter max-w-81.5 lg:max-w-120 ${styles.bodyText}`}
             >
-              <span className="text-black font-semibold">
+              <span className="text-text-primary font-semibold">
                 For too long, cross-border shipping has been a black box.{" "}
               </span>
               <span className="text-text-medium font-normal">
@@ -227,7 +227,7 @@ export default function Home() {
                 />
                 <div className="flex flex-col gap-1">
                   <h3
-                    className={`font-inter font-semibold text-black max-w-70 lg:max-w-full ${styles.bulletHeading}`}
+                    className={`font-inter font-semibold text-text-primary max-w-70 lg:max-w-full ${styles.bulletHeading}`}
                   >
                     Know where your shipment is — at every step.
                   </h3>
@@ -251,7 +251,7 @@ export default function Home() {
                 />
                 <div className="flex flex-col gap-1">
                   <h3
-                    className={`font-inter font-semibold text-black max-w-70 lg:max-w-full ${styles.bulletHeading}`}
+                    className={`font-inter font-semibold text-text-primary max-w-70 lg:max-w-full ${styles.bulletHeading}`}
                   >
                     Handled securely across borders, ports, and roads.
                   </h3>
@@ -290,7 +290,7 @@ export default function Home() {
             {/* Learn More Button */}
             <button
               type="button"
-              className={`cursor-pointer flex items-center gap-2 bg-black text-white font-inter font-semibold rounded-xl w-60 h-12.5 px-6  ${styles.learnBtn}`}
+              className={`cursor-pointer flex items-center gap-2 bg-text-primary text-background font-inter font-semibold rounded-xl w-60 h-12.5 px-6  ${styles.learnBtn}`}
             >
               Learn how we deliver
               <Image
@@ -304,7 +304,7 @@ export default function Home() {
         </div>
       </section>
       {/* Section 3 */}
-      <section className="bg-white py-16 px-6 flex flex-col items-center">
+      <section className="bg-background py-16 px-6 flex flex-col items-center">
         <h2
           className={`font-urbanist font-semibold text-text-heading text-center max-w-90 ${styles.reliabilityHeading}`}
         >
@@ -318,7 +318,7 @@ export default function Home() {
         <ShippingSteps />
       </section>
       {/* Section 4 */}
-      <section className="bg-white py-16 px-6 flex flex-col items-center">
+      <section className="bg-background py-16 px-6 flex flex-col items-center">
         <h2
           className={`font-urbanist font-semibold text-text-heading text-center max-w-80 ${styles.reliabilityHeading}`}
         >
@@ -343,7 +343,7 @@ export default function Home() {
 
           {/* Left column */}
           <div className="flex flex-col gap-4 lg:order-1 lg:items-end">
-            <div className="flex flex-col gap-3 p-6 rounded-2xl w-83 min-h-52.75 border border-[#FFFFFF33] bg-light-shade">
+            <div className="flex flex-col gap-3 p-6 rounded-2xl w-83 min-h-52.75 border border-border-shade bg-light-shade">
               <Image
                 src="/location.svg"
                 alt="Location"
@@ -364,7 +364,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="flex flex-col gap-3 p-6 rounded-2xl w-83 min-h-52.75 border border-[#FFFFFF33] bg-light-shade">
+            <div className="flex flex-col gap-3 p-6 rounded-2xl w-83 min-h-52.75 border border-border-shade bg-light-shade">
               <Image
                 src="/global.svg"
                 alt="Global"
@@ -388,7 +388,7 @@ export default function Home() {
 
           {/* Right column */}
           <div className="flex flex-col gap-4 lg:order-3">
-            <div className="flex flex-col gap-3 p-6 rounded-2xl w-83 min-h-52.75 border border-[#FFFFFF33] bg-light-shade">
+            <div className="flex flex-col gap-3 p-6 rounded-2xl w-83 min-h-52.75 border border-border-shade bg-light-shade">
               <Image
                 src="/secure.svg"
                 alt="Secure"
@@ -409,7 +409,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="flex flex-col gap-3 p-6 rounded-2xl w-83 min-h-52.75 border border-[#FFFFFF33] bg-light-shade">
+            <div className="flex flex-col gap-3 p-6 rounded-2xl w-83 min-h-52.75 border border-border-shade bg-light-shade">
               <Image
                 src="/checklist.svg"
                 alt="Checklist"
