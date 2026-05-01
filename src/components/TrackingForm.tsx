@@ -117,35 +117,29 @@ export default function TrackingForm() {
       {mode === "schedule" && (
         <>
           {/* Pickup and Delivery Date */}
-          <div className="flex flex-col gap-2 lg:flex-row lg:gap-2">
-            <div className="flex flex-col gap-2 flex-1">
-              <label
-                htmlFor="pickup-date"
-                className="font-inter font-medium text-background/60 text-sm"
-              >
-                PICKUP DATE
-              </label>
-              <input
-                id="pickup-date"
-                type="date"
-                className={`w-full h-12 rounded-[10px] glass border-background/50 px-4 font-inter text-background outline-none scheme-dark cursor-pointer ${styles.glassBtn}`}
-              />
-            </div>
+          <div className="flex flex-col gap-2 lg:flex-row lg:gap-2 min-w-0">
+  <div className="flex flex-col gap-2 flex-1 min-w-0">
+    <label htmlFor="pickup-date" className="font-inter font-medium text-background/60 text-sm">
+      PICKUP DATE
+    </label>
+    <input
+      id="pickup-date"
+      type="date"
+      className={`w-full min-w-0 h-12 rounded-[10px] glass border-background/50 px-4 font-inter text-background outline-none scheme-dark cursor-pointer ${styles.glassBtn}`}
+    />
+  </div>
 
-            <div className="flex flex-col gap-2 flex-1">
-              <label
-                htmlFor="delivery-date"
-                className="font-inter font-medium text-background/60 text-sm"
-              >
-                DELIVERY DATE
-              </label>
-              <input
-                id="delivery-date"
-                type="date"
-                className={`w-full h-12 rounded-[10px] glass border-background/50 px-4 font-inter text-background outline-none scheme-dark cursor-pointer ${styles.glassBtn}`}
-              />
-            </div>
-          </div>
+  <div className="flex flex-col gap-2 flex-1 min-w-0">
+    <label htmlFor="delivery-date" className="font-inter font-medium text-background/60 text-sm">
+      DELIVERY DATE
+    </label>
+    <input
+      id="delivery-date"
+      type="date"
+      className={`w-full min-w-0 h-12 rounded-[10px] glass border-background/50 px-4 font-inter text-background outline-none scheme-dark cursor-pointer ${styles.glassBtn}`}
+    />
+  </div>
+</div>
 
           {/* Transport Mode */}
           <div className="flex flex-col gap-2">
