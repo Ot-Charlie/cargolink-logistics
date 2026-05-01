@@ -6,7 +6,7 @@ import ShippingSteps from "@/components/ShippingSteps";
 export default function Home() {
   return (
     <main className="">
-      <section className="heroSection w-full min-h-screen pt-3 pb-10">
+      <section className="heroSection w-full min-h-screen pt-16 pb-10">
         <Navbar />
         {/* Badge */}
         <div className="flex items-center justify-center mt-4">

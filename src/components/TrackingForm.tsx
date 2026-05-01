@@ -17,7 +17,7 @@ export default function TrackingForm() {
           className={`cursor-pointer w-34 h-9.75 rounded-[42px] font-inter font-normal transition-all ${
             mode === "track"
               ? "bg-background text-text-primary"
-              : `bg-background/20 backdrop-blur-md border border-background/70 text-background ${styles.glassBtn}`
+              : `glass text-background ${styles.glassBtn}`
           }`}
         >
           Track
@@ -28,7 +28,7 @@ export default function TrackingForm() {
           className={`cursor-pointer w-34 h-9.75 rounded-[42px] font-inter font-normal transition-all ${
             mode === "schedule"
               ? "bg-background text-text-primary"
-              : `bg-background/20 backdrop-blur-md border border-background/70 text-background ${styles.glassBtn}`
+              : `glass text-background ${styles.glassBtn}`
           }`}
         >
           Schedule
@@ -50,12 +50,12 @@ export default function TrackingForm() {
               id="tracking-id"
               type="text"
               placeholder="e.g. CLK-2024-8842"
-              className="w-full h-12 rounded-[10px] bg-background/20 backdrop-blur-md border border-background/50 px-4 font-inter text-background placeholder:text-background/60 outline-none"
+              className={`w-full h-12 rounded-[10px] glass border-background/50 px-4 font-inter text-background placeholder:text-background/60 outline-none ${styles.glassBtn}`}
             />
           </div>
 
           {/* Shipment Info Card */}
-          <div className="w-full bg-background/20 backdrop-blur-md border border-background/20 rounded-[15px] p-3 flex flex-col gap-3">
+          <div className={`w-full glass rounded-[15px] p-3 flex flex-col gap-3 ${styles.glassBtn}`}>
             {/* From / Truck / To */}
             <div className="flex items-center justify-between">
               <div className="flex flex-col">
@@ -93,15 +93,11 @@ export default function TrackingForm() {
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-1.5">
                 <span className="w-2 h-2 rounded-full bg-green-dot"></span>
-                <span
-                  className={`font-inter text-text-medium ${styles.statusText}`}
-                >
+                <span className={`font-inter text-text-medium ${styles.statusText}`}>
                   In transit
                 </span>
               </div>
-              <span
-                className={`font-inter text-background/50 ${styles.statusText}`}
-              >
+              <span className={`font-inter text-background/50 ${styles.statusText}`}>
                 ETA 3 days
               </span>
             </div>
@@ -120,7 +116,7 @@ export default function TrackingForm() {
       {/* Schedule Mode */}
       {mode === "schedule" && (
         <>
-          {/* Pickup Date */}
+          {/* Pickup and Delivery Date */}
           <div className="flex flex-col gap-2 lg:flex-row lg:gap-2">
             <div className="flex flex-col gap-2 flex-1">
               <label
@@ -132,11 +128,10 @@ export default function TrackingForm() {
               <input
                 id="pickup-date"
                 type="date"
-                className="w-full h-12 rounded-[10px] bg-background/20 backdrop-blur-md border border-background/50 px-4 font-inter text-background outline-none scheme-dark cursor-pointer"
+                className={`w-full h-12 rounded-[10px] glass border-background/50 px-4 font-inter text-background outline-none scheme-dark cursor-pointer ${styles.glassBtn}`}
               />
             </div>
 
-            {/* Delivery Date */}
             <div className="flex flex-col gap-2 flex-1">
               <label
                 htmlFor="delivery-date"
@@ -147,7 +142,7 @@ export default function TrackingForm() {
               <input
                 id="delivery-date"
                 type="date"
-                className="w-full h-12 rounded-[10px] bg-background/20 backdrop-blur-md border border-background/50 px-4 font-inter text-background outline-none scheme-dark cursor-pointer"
+                className={`w-full h-12 rounded-[10px] glass border-background/50 px-4 font-inter text-background outline-none scheme-dark cursor-pointer ${styles.glassBtn}`}
               />
             </div>
           </div>
@@ -164,7 +159,7 @@ export default function TrackingForm() {
               id="transport-mode"
               title="Transport Mode"
               defaultValue=""
-              className="w-full h-12 rounded-[10px] bg-background/20 backdrop-blur-md border border-background/50 px-4 font-inter text-background outline-none scheme-dark cursor-pointer"
+              className={`w-full h-12 rounded-[10px] glass border-background/50 px-4 font-inter text-background outline-none scheme-dark cursor-pointer ${styles.glassBtn}`}
             >
               <option value="" disabled className="text-text-primary">
                 Select mode
@@ -193,7 +188,7 @@ export default function TrackingForm() {
               id="destination"
               type="text"
               placeholder="e.g. London, UK"
-              className="w-full h-12 rounded-[10px] bg-background/20 backdrop-blur-md border border-background/50 px-4 font-inter text-background placeholder:text-background/60 outline-none"
+              className={`w-full h-12 rounded-[10px] glass border-background/50 px-4 font-inter text-background placeholder:text-background/60 outline-none ${styles.glassBtn}`}
             />
           </div>
 
