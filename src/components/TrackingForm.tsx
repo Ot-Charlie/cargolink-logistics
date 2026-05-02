@@ -3,7 +3,12 @@
 import { useState } from "react";
 import Image from "next/image";
 import styles from "@/app/typography.module.css";
-import { SearchBox } from '@mapbox/search-js-react';
+import dynamic from 'next/dynamic';
+
+const SearchBox = dynamic(
+  () => import('@mapbox/search-js-react').then((mod) => mod.SearchBox),
+  { ssr: false }
+);
 
 interface FormErrors {
   pickupDate?: string;
