@@ -25,7 +25,6 @@ interface FormData {
 }
 
 export default function TrackingForm() {
-  console.log('Mapbox token:', process.env.NEXT_PUBLIC_MAPBOX_TOKEN);
   const [mode, setMode] = useState<"track" | "schedule">("track");
   const [errors, setErrors] = useState<FormErrors>({});
   const [success, setSuccess] = useState(false);
