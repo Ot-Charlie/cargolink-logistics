@@ -71,3 +71,42 @@ body {
     backdrop-filter: blur(12px);
   }
 }
+@keyframes draw-circle {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes draw-tick {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.animate-draw-circle {
+  animation: draw-circle 0.8s ease-out forwards;
+}
+
+.animate-draw-tick {
+  animation: draw-tick 0.5s ease-out 0.8s forwards;
+}
+.mapboxgl-search-js-core input {
+  color: white !important;
+  background: transparent !important;
+}
+
+.mapboxgl-search-js-core input::placeholder {
+  color: rgba(255, 255, 255, 0.6) !important;
+}
+[class*="mbx"][class*="Input"] {
+  color: white !important;
+}
+
+[class*="mbx"][class*="Input"]::placeholder {
+  color: rgba(255, 255, 255, 0.6) !important;
+}
+[class*="mbx"][class*="Results"] {
+  background-color: #000000 !important;
+   color: #ffffff !important;
+  border-radius: 10px !important;
+}
