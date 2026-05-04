@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import Image from "next/image";
 import styles from "@/app/typography.module.css";
 import dynamic from 'next/dynamic';
@@ -25,6 +26,8 @@ interface FormData {
 }
 
 export default function TrackingForm() {
+  const router = useRouter();
+
   const [mode, setMode] = useState<"track" | "schedule">("track");
   const [errors, setErrors] = useState<FormErrors>({});
   const [success, setSuccess] = useState(false);
@@ -34,6 +37,8 @@ export default function TrackingForm() {
     transportMode: "",
     destination: "",
   });
+  const [trackingId, setTrackingId] = useState("");
+  const [trackingError, setTrackingError] = useState("");
 
   const validate = () => {
     const newErrors: FormErrors = {};
@@ -57,8 +62,21 @@ export default function TrackingForm() {
     setErrors({});
   };
 
+  const handleTrack = () => {
+    if (!trackingId) {
+      setTrackingError("Please enter a tracking ID");
+      return;
+    }
+    const format = /^CLK-\d{4}-\d{6}$/;
+    if (!format.test(trackingId)) {
+      setTrackingError("Invalid format. Use CLK-YYYY-XXXXXX (e.g. CLK-2026-884219)");
+      return;
+    }
+    router.push(`/tracking?id=${trackingId}`);
+  };
+
   return (
-    <div className="w-full max-w-105 bg-background/20 backdrop-blur-md border border-background/20 rounded-[20px] p-4 flex flex-col gap-4 mt-4 lg:mt-0">
+        <div className="w-full max-w-105 bg-background/20 backdrop-blur-md border border-background/20 rounded-[20px] p-4 flex flex-col gap-4 mt-4 lg:mt-0">
 
       {/* Track/Schedule Toggle — hidden on success */}
       {!success && (
@@ -96,12 +114,22 @@ export default function TrackingForm() {
             <label htmlFor="tracking-id" className="font-inter font-medium text-background/60 text-sm">
               TRACKING ID
             </label>
-            <input
-              id="tracking-id"
-              type="text"
-              placeholder="e.g. CLK-2024-8842"
-              className={`w-full h-12 rounded-[10px] glass border-background/50 px-4 font-inter text-background placeholder:text-background/60 outline-none ${styles.glassBtn}`}
-            />
+          <input
+  id="tracking-id"
+  type="text"
+  placeholder="e.g. CLK-2026-884219"
+  value={trackingId}
+  onChange={(e) => {
+    setTrackingId(e.target.value);
+    if (e.target.value) setTrackingError("");
+  }}
+  className={`w-full h-12 rounded-[10px] glass px-4 font-inter text-background placeholder:text-background/60 outline-none ${styles.glassBtn} ${
+    trackingError ? "border-2 border-red-400" : "border-background/50"
+  }`}
+/>
+{trackingError && (
+  <p className="text-red-400 text-xs font-inter mt-1 ml-2">{trackingError}</p>
+)}
           </div>
 
           {/* Shipment Info Card */}
@@ -132,12 +160,13 @@ export default function TrackingForm() {
           </div>
 
           {/* Track Button */}
-          <button
-            type="button"
-            className={`cursor-pointer w-full h-10 bg-accent text-background font-inter font-semibold rounded-[10px] hover:bg-dark-accent transition-all ${styles.trackBtn}`}
-          >
-            Track Shipment →
-          </button>
+         <button
+  type="button"
+  onClick={handleTrack}
+  className={`cursor-pointer w-full h-10 bg-accent text-background font-inter font-semibold rounded-[10px] hover:bg-dark-accent transition-all ${styles.trackBtn}`}
+>
+  Track Shipment →
+</button>
         </>
       )}
 
@@ -145,7 +174,7 @@ export default function TrackingForm() {
       {mode === "schedule" && !success && (
         <>
           {/* Pickup and Delivery Date */}
-          <div className="overflow-hidden rounded-[10px]">
+          <div className="overflow-hidden">
           <div className="flex flex-col gap-2 lg:flex-row lg:gap-2 min-w-0">
             <div className="flex flex-col gap-1 flex-1 min-w-0">
               <label htmlFor="pickup-date" className="font-inter font-medium text-background/60 text-sm">

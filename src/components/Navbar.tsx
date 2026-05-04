@@ -6,24 +6,30 @@ import Image from "next/image";
 
 const NAV_LINKS = ["Services", "Solutions", "Tracking"];
 
-export default function Navbar() {
+interface NavbarProps {
+  variant?: "transparent" | "solid";
+}
+
+export default function Navbar({ variant = "transparent" }: NavbarProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
+    if (variant === "solid") return;
     const handleScroll = () => {
       setScrolled(window.scrollY > 10);
     };
-
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [variant]);
+
+  const isSolid = variant === "solid" || scrolled;
 
   return (
-   <div className="fixed top-4 z-50 w-[80%] left-1/2 -translate-x-1/2">
+    <div className="fixed top-4 z-50 w-[80%] left-1/2 -translate-x-1/2">
       {/* Navbar */}
       <nav className={`w-full px-6 py-2 rounded-[75px] border transition-all duration-300 ${
-        scrolled
+        isSolid
           ? "bg-background border-background shadow-md"
           : "bg-background/20 backdrop-blur-md border-background/20"
       }`}>
@@ -38,7 +44,7 @@ export default function Navbar() {
               loading="eager"
             />
             <span className="text-xl font-bold font-urbanist">
-              <span className={scrolled ? "text-text-heading" : "text-background"}>CARGO</span>
+              <span className={isSolid ? "text-text-heading" : "text-background"}>CARGO</span>
               <span className="text-accent">LINK</span>
             </span>
           </div>
