@@ -78,7 +78,7 @@ export default function ShippingSteps() {
           ref={(el) => {
             itemRefs.current[index] = el;
           }}
-          className={`flex flex-col items-center gap-0 lg:flex-row lg:items-stretch lg:gap-0 ${
+          className={`flex flex-col items-center lg:flex-row lg:items-stretch ${
             step.reverse ? "lg:flex-row-reverse" : ""
           }`}
         >
@@ -118,7 +118,7 @@ export default function ShippingSteps() {
           {/* Image */}
           <div
             data-step-image
-            className="lg:w-1/2 flex justify-center lg:px-10"
+            className="-mt-12 lg:mt-0 lg:w-1/2 flex lg:px-10"
           >
             <Image
               src={step.image}

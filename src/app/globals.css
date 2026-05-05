@@ -48,7 +48,7 @@ body {
   filter: grayscale(100%);
   opacity: 0;
   transform: translateY(20px) scale(0.95);
-  transition: filter 2s ease-out 0.5s, opacity 2s ease-out 0.5s, transform 1.2s ease-out 2s;
+  transition: filter 2s ease-out 1s, opacity 2s ease-out 1s, transform 2s ease-out 2s;
 }
 
 [data-step-image].in-view {
